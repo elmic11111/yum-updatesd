@@ -42,7 +42,7 @@ default['yum-updatesd']['smtp_server'] = 'localhost:25'
 default['yum-updatesd']['syslog_facility'] = 'DAEMON'
 # Level of syslog messages. Defaults to 'WARN'. 
 default['yum-updatesd']['syslog_level'] =  'WARN'
-'''
+```
 
 Usage
 -----
