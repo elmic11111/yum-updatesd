@@ -19,22 +19,22 @@
 # limitations under the License.
 
 package 'yum-updatesd' do
-	action :upgrade
-	notifies :restart, 'service[yum-updatesd']'
+  action :upgrade
+  notifies :restart, 'service[yum-updatesd]'
 end
 
 
-service 'yum-updatesd'' do
-	service_name 'httpd'
-	supports [:restart, :reload, :status, :stop]
-	action [ :enable, :start ]
+service 'yum-updatesd' do
+  service_name 'yum-updatesd'
+  supports [:restart, :reload, :status, :stop]
+  action [ :enable, :start ]
 end
 
 template '/etc/yum/yum-updatesd.conf' do
-	source 'yum-updatesd.conf.erb'
-	owner 'root'
-	group 'root'
-	mode 0644
-	action :create
-	notifies :restart, 'service[yum-updatesd]'
+  source 'yum-updatesd.conf.erb'
+  owner 'root'
+  group 'root'
+  mode 0644
+  action :create
+  notifies :restart, 'service[yum-updatesd]'
 end
