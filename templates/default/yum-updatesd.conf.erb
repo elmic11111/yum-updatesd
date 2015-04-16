@@ -13,7 +13,7 @@ do_update = <%= node['yum-updatesd']['do_update'] %>
 # automatically download updates
 do_download = <%= node['yum-updatesd']['do_download'] %>
 # automatically download deps of updates
-do_download_deps = <%= node['yum-updatesd']['do_download_deps'] %>o
+do_download_deps = <%= node['yum-updatesd']['do_download_deps'] %>
 
 <% if node['yum-updatesd']['emit_via'] == 'email' %>
 # Email Notifcation Settings
