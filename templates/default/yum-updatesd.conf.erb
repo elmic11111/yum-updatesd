@@ -6,7 +6,7 @@ updaterefresh = <%= node['yum-updatesd']['updaterefresh'] %>
 # how to send notifications (valid: dbus, email, syslog)
 emit_via = <%= node['yum-updatesd']['emit_via'] %>
 # should we listen via dbus to give out update information/check for new updates
-dbus_listener = <%= node['yum-updatesd']['do_download_deps'] %>
+dbus_listener = <%= node['yum-updatesd']['dbus_listener'] %>
 
 # automatically install updates
 do_update = <%= node['yum-updatesd']['do_update'] %>
