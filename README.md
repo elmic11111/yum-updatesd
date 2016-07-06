@@ -27,7 +27,7 @@ default['yum-updatesd']['do_download'] = False
 # Boolean option to automatically download dependencies of packages which need updating as well. Defaults to False. 
 default['yum-updatesd']['do_download_deps'] = False
 # Boolen option to listen via dbus to give out update information/check for new updates
-default['dbus_listener']['do_download_deps'] = False
+default['yum-updatesd']['dbus_listener'] = False
 
 #Mail Options
 # List of email addresses to send update notification to. Defaults to 'root@localhost'. 
